@@ -11,6 +11,10 @@
 			width:300px;
         	height:300px;
 		}
+		.error { 
+			color: red; 
+			margin: 5px; 
+		}
 	</style>
 </head>
 <body>
@@ -20,16 +24,19 @@
   		<div class = "login-box">
             <div class="input-box">
                 <label for="username">아이디</label>
-                <input id="userid" type="text" name="userid" placeholder="아이디">
+                <input id="userid" type="text" name="userid" placeholder="아이디" value="${ userid }">
             </div>
 
             <div class="input-box">
                 <label for="password">비밀번호</label>
-                <input id="passwd" type="password" name="passwd" placeholder="비밀번호">
+                <input id="passwd" type="password" name="passwd" placeholder="비밀번호" value="${ password }">
             </div>
             <div id="forgot">비밀번호 찾기</div>
+            <div id="autologin"><input type="checkbox" name="autologin" value="${ autologin }"/>자동 로그인</div>
             <input type="submit" value="로그인">
-        </div>
+            <input type="submit" value="회원가입">
+            <div class="error">${ errorMsg }</div>
+       </div>
 </form>
 </body>
 </html>
