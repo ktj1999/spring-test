@@ -26,10 +26,11 @@ public class HomeController {
     
     @PostMapping("home/login") //URL이 Post 방식으로 서버에 요청되면 실행
     public String text2(Model model, String userid, String passwd) {
-    	model.addAttribute("message", "POST 출력 완료");
+    	model.addAttribute("ID", userid);
+    	model.addAttribute("PWD", passwd);
     	model.addAttribute("now",new Date());
     	System.out.println(userid);
         System.out.println(passwd);
-        return "home/login";
+        return "home/index";
     }
 }
