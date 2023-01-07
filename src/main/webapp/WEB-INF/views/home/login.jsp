@@ -33,8 +33,8 @@
             </div>
             <div id="forgot">비밀번호 찾기</div>
             <div id="autologin"><input type="checkbox" name="autologin" value="${ autologin }"/>자동 로그인</div>
-            <input type="submit" value="로그인">
-            <input type="submit" value="회원가입">
+            <input type="submit" value="로그인" value="${ login }">
+            <input type="submit" value="회원가입" value="${ register }">
             <div class="error">${ errorMsg }</div>
        </div>
 </form>
